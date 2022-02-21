@@ -7,7 +7,7 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk import download
-download('all-corpora')
+download('all')
 
 def remove_punc(text):
     txt = text
