@@ -6,6 +6,7 @@ import string
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
+from nltk import download
 
 def remove_punc(text):
     txt = text
@@ -17,6 +18,7 @@ def remove_num(text):
     return ''.join(char for char in text if not char.isdigit())
 
 def remove_stopw(text):
+    download('stopwords')
     stop_words = set(stopwords.words('english'))
     word_tokens = word_tokenize(text)
     return ' '.join(w for w in word_tokens if not w in stop_words)
